@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UneInventée — Le journal des actualités impossibles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site">
+    <header class="topbar">
+      <div class="brand">
+        <h1>📰 UneInventée</h1>
+        <p class="tag">SATIRE — Contenu fictif, humoristique et anachronique</p>
+      </div>
+
+      <div class="controls">
+        <input id="search" placeholder="Rechercher un mot-clé, ex : 'Tour Eiffel'..." />
+        <select id="categoryFilter">
+          <option value="all">Toutes catégories</option>
+        </select>
+        <button id="btn-new" title="Rafraîchir la page">↻</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="filters">
+        <div id="categories" class="chips"></div>
+      </section>
+
+      <section id="grid" class="grid"></section>
+
+      <section class="cta">
+        <p>Envie de proposer une une ? Contacte <strong>Rohansst974@gmail.com ou au 06 21 67 84 67</strong>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2025 UneInventée — Site humoristique. Les histoires sont inventées.</small>
+    </footer>
+  </div>
+
+  <!-- Article Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <article class="modal-card" role="article">
+      <button id="modal-close" class="modal-close" aria-label="Fermer">✕</button>
+      <header class="modal-header">
+        <h2 id="modal-title"></h2>
+        <p id="modal-meta" class="meta"></p>
+      </header>
+      <div id="modal-image" class="modal-image"></div>
+      <div id="modal-body" class="modal-body"></div>
+
+      <footer class="modal-footer">
+        <div class="share">
+          <button id="share-btn">🔗 Partager</button>
+          <button id="print-btn">🖨️ Imprimer / Télécharger</button>
+        </div>
+        <div class="tags" id="modal-tags"></div>
+      </footer>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
