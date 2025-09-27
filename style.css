@@ -1,0 +1,193 @@
+:root{
+  --bg:#fbf6f0;
+  --paper:#fff8f2;
+  --ink:#222;
+  --muted:#7b6b5f;
+  --accent:#b41e3a;
+  --card-shadow: 0 8px 22px rgba(20,20,20,0.06);
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Georgia", "Times New Roman", serif;
+  background:linear-gradient(180deg,var(--bg),#fff);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.site{max-width:1100px;margin:20px auto;padding:18px}
+.topbar{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand h1{margin:0;color:var(--accent);font-size:28px}
+.tag{margin:4px 0 0;color:var(--muted);font-size:13px;background:#fff2f4;padding:6px 8px;border-left:4px solid var(--accent);border-radius:6px}
+.controls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.controls input{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6dcd6;
+  background:#fff;
+  width:280px;
+  font-size:14px
+}
+.controls select{padding:10px;border-radius:8px;border:1px solid #e6dcd6;background:#fff}
+.controls button{padding:8px 10px;border-radius:8px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+
+.filters{margin-top:16px;margin-bottom:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:8px 12px;background:#fff;border-radius:999px;border:1px solid #eee;color:var(--muted);cursor:pointer;font-size:13px}
+.chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:18px;
+  margin-top:12px
+}
+.card{
+  background:var(--paper);
+  padding:14px;
+  border-radius:var(--radius);
+  box-shadow:var(--card-shadow);
+  border:1px solid rgba(0,0,0,0.04);
+  display:flex;
+  flex-direction:column;
+  min-height:160px
+}
+.card .thumb{
+  height:110px;
+  border-radius:8px;
+  background:#efe6da;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#8b6f63;
+  font-weight:700;
+  margin-bottom:10px
+}
+.card h3{margin:0;margin-bottom:6px;font-size:18px}
+.card p.excerpt{color:var(--muted);margin:0;flex:1}
+.card .meta{
+  font-size:12px;
+  color:#9b897f;
+  margin-top:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+.card button.open{
+  background:var(--accent);
+  border:0;
+  color:#fff;
+  padding:8px 10px;
+  border-radius:8px;
+  margin-left:8px;
+  cursor:pointer
+}
+
+.cta{
+  margin-top:22px;
+  padding:14px;
+  background:#fff;
+  border-radius:8px;
+  border:1px dashed rgba(0,0,0,0.04);
+  color:var(--muted)
+}
+
+footer{
+  margin-top:26px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(rgba(6,6,6,0.35),rgba(6,6,6,0.35));
+  padding:20px
+}
+.modal[aria-hidden="false"]{display:flex}
+.modal-card{
+  background:var(--paper);
+  max-width:880px;
+  width:100%;
+  border-radius:12px;
+  padding:18px;
+  position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,0.45);
+  overflow:auto;
+  max-height:90vh
+}
+.modal-close{
+  position:absolute;
+  right:12px;
+  top:12px;
+  border:0;
+  background:transparent;
+  font-size:20px;
+  cursor:pointer
+}
+.modal-header h2{margin:0 0 6px}
+.meta{font-size:13px;color:var(--muted)}
+.modal-image{
+  height:220px;
+  border-radius:8px;
+  background:#efe6da;
+  margin:12px 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#8b6f63;
+  font-weight:700
+}
+.modal-body{line-height:1.6;color:#2f2f2f}
+.modal-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:14px
+}
+.share button{
+  background:var(--accent);
+  color:#fff;
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  margin-right:8px;
+  cursor:pointer
+}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{
+  background:#fff;
+  border-radius:8px;
+  padding:6px 8px;
+  border:1px solid #eee;
+  color:var(--muted);
+  font-size:13px
+}
+
+/* Responsive */
+@media (max-width:720px){
+  .controls input{width:100%}
+  .controls{flex-direction:column;align-items:stretch}
+  .modal-image{height:140px}
+}
+
+
